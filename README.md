@@ -1,7 +1,7 @@
 # EXPERIMENT-NO--04"-Distance measurement using Ultrasonic sensor
 
 ## AIM: 
-To interface ultrasonic sensor to measure distance of an obstacle.
+To measure the distance of the given object using ultrasonic sensor(HC-SR04).
  
 ### COMPONENTS REQUIRED:
 1.	ultrasonic sensor module HC-SR04
