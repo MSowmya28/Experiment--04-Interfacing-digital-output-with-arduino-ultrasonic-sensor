@@ -55,8 +55,35 @@ speed of sound in the air at 20ºC (68ºF) = 343m/s
 
 
 ### PROGRAM 
+```
+#define echopin 9
+#define trigPin 10
+long duration;
+int distance;
+void setup()
+{
+  pinMode(10,OUTPUT);
+  pinMode(9,INPUT);
+  Serial.begin(9600);
+}
+void loop()
+{
+  digitalWrite(trigPin,LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin,HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin,LOW);
+  duration=pulseIn(echopin,HIGH);
+  distance = duration*0.034/3;
+  Serial.print("Distance: ");
+  Serial.print(distance);
+  Serial.println("cm");
+}
+```
 
-### Distance vs measurement table 
+### OUTPUT:
+ ![output](./robotics%20circuit%20ex4.PNG)
+ ![output](./robotics%20circuit%20ex4.1.PNG)
 
 
 
@@ -65,7 +92,8 @@ speed of sound in the air at 20ºC (68ºF) = 343m/s
 
 
 
-### RESULTS
+### RESULTS:
+       Thus the distance value is measured using ultrasonic sensor using ardino.
 
 
 
